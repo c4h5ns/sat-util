@@ -1,0 +1,34 @@
+[package]
+name = "sat-core"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "sat_core"
+crate-type = ["rlib"]
+
+[dependencies]
+color-eyre.workspace = true
+futures.workspace = true
+iso8601-duration.workspace = true
+itertools.workspace = true
+ndarray.workspace = true
+numpy.workspace = true
+pin-project-lite.workspace = true
+pyo3.workspace = true
+pyo3-async-runtimes.workspace = true
+rand.workspace = true
+rand_chacha.workspace = true
+rand_pcg.workspace = true
+regex.workspace = true
+reqwest = { version = "0.13.2", features = [
+    "json",
+    "native-tls-vendored",
+    "cookies",
+    "brotli",
+    "deflate",
+    "gzip",
+] }
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true

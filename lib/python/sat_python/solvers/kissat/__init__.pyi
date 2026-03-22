@@ -1,0 +1,9 @@
+from ...cnf import Cnf
+from .. import SolverOutput
+
+class KissatSolverContext:
+    def __init__(self, timeout: int = ...) -> None: ...
+    def create_solver(self, cnf: Cnf) -> KissatSolver: ...
+
+class KissatSolver:
+    async def solve(self) -> SolverOutput: ...

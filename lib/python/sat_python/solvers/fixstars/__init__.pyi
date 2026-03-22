@@ -1,0 +1,9 @@
+from ...cnf import Cnf
+from .. import SolverOutput
+
+class FixstarsSolverContext:
+    def __init__(self, access_token: str) -> None: ...
+    def create_solver(self, cnf: Cnf) -> FixstarsSolver: ...
+
+class FixstarsSolver:
+    async def solve(self) -> SolverOutput: ...
